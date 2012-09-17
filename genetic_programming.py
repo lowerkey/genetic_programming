@@ -52,6 +52,7 @@ class Population():
             gene.random(len(self.target))
             self.members.append(gene)
         self.generationNumber = 0
+        self.history = []
 
     def calcCosts(self):
         for member in self.members:
@@ -73,8 +74,8 @@ class Population():
     def generation(self, display):
         while not self._generation(display):
             pass
-
-        return self.generationNumber
+        
+        return (self.generationNumber, self.history)
 
     def _generation(self, display):
         self.calcCosts()
@@ -96,6 +97,7 @@ class Population():
                 return True
 
         self.generationNumber += 1
+        self.history.append(self.members[0].cost)
         return False
 
 if __name__ == '__main__':
@@ -111,4 +113,5 @@ if __name__ == '__main__':
         population = Population("Hello, Worlds!", 1000)
         generationNumbers.append(population.generation(False))
         print i, population.generationNumber
+        print population.history
     print generationNumbers
