@@ -30,6 +30,11 @@ class Gene():
 
         self.code = code
 
+    def random(self, length):
+        code = ''
+        for i in range(length):
+            code += chr(int(random()*255))
+
     def calcCost(self, target):
         total = 0
         for i in range(len(self.code)):
@@ -43,7 +48,9 @@ class Population():
         self.target = target
         self.members = []
         for i in range(size):
-            self.members.append(Gene("A" * len(self.target)))
+            gene = Gene('')
+            gene.random(len(self.target))
+            self.members.append(gene)
         self.generationNumber = 0
 
     def calcCosts(self):
