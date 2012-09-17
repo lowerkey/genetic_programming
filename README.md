@@ -1,6 +1,11 @@
 = README =
 This file is supposed to explain how the genetic_programming.py file works.
 
+I ported this program from http://burakkanber.com/blog/machine-learning-genetic-algorithms-in-javascript-part-2/
+to python, and what you see in genetic_programming.py is the result.
+
+Simply run python genetic_programming.py
+
 Basically, there's a Gene class with the properties code and cost, and the
 methods mutate, calcCost, and mate.
 
