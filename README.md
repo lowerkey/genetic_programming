@@ -1,7 +1,7 @@
-= README =
+README.md
 This file is supposed to explain how the genetic_programming.py file works.
 
-I ported this program from http://burakkanber.com/blog/machine-learning-genetic-algorithms-in-javascript-part-2/
+I ported this program from http://burakkanber.com/blog/machine-learning-genetic-algorithms-part-1-javascript/
 to python, and what you see in genetic_programming.py is the result.
 
 Simply run python genetic_programming.py
@@ -19,3 +19,6 @@ Then there's the Population class. It tells its members when and whom to mate,
 and when to mutate.
 
 For now, the initial gene's start out with a fixed code (all As).
+
+A python response to the next iteration of the machine learning in javascript 
+blog tag will be found at https://github.com/lowerkey/genetic_programming_2
