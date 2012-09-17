@@ -100,8 +100,8 @@ if __name__ == '__main__':
         print child.code, child.cost
 
     generationNumbers = []
-    for i in range(100):
-        population = Population("Hello, Worlds!", 100)
+    for i in range(10):
+        population = Population("Hello, Worlds!", 1000)
         generationNumbers.append(population.generation(False))
         print i, population.generationNumber
     print generationNumbers
