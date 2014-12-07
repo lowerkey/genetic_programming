@@ -112,7 +112,7 @@ class Population():
 
 if __name__ == '__main__':
     gene1 = Gene("AAAAAAAAAAAAAA")
-    gene2 = Gene("BBBBBBBBBBBBBB")
+    gene2 = Gene("AAAAAAAAAAAAAA")
     children = gene1.mate(gene2)
     for child in children:
         child.calcCost("Hello, Worlds!")
